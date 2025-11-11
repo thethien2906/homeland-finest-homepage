@@ -17,3 +17,42 @@ export const flavors = [
   },
   { flavor: "watermelon", color: "#4B7002", name: "Watermelon Crush" },
 ];
+
+
+export const products = [
+  {
+    id: "nuocMam", // ID để gọi
+    name: "Nước Mắm Phú Quốc", // Tên hiển thị (ví dụ)
+    modelPath: "/models/nuoc_mam.glb" // Đường dẫn tới model
+  },
+  {
+    id: "longDen",
+    name: "Đèn Lồng Hội An",
+    modelPath: "/models/long_den.glb"
+  },
+  {
+    id: "ruou",
+    name: "Rượu Bầu Đá",
+    modelPath: "/models/ruou.glb"
+  },
+  {
+    id: "banhPia",
+    name: "Bánh Pía Sóc Trăng",
+    modelPath: "/models/banh_pia.glb"
+  },
+  {
+    id: "nemChua",
+    name: "Nem Chua Thanh Hóa",
+    modelPath: "/models/nem_chua.glb"
+  },
+  {
+    id: "ruouCan",
+    name: "Rượu Cần",
+    modelPath: "/models/ruou_can.glb"
+  },
+  {
+    id: "hoaSen",
+    name: "Hoa Sen",
+    modelPath: "/models/hoa_sen.glb"
+  },
+];

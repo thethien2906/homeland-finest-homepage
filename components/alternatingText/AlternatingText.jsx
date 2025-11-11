@@ -1,3 +1,5 @@
+// components/alternatingText/AlternatingText.jsx
+
 "use client";
 
 import { View } from "@react-three/drei";
@@ -6,18 +8,19 @@ import gsap from "gsap";
 import AlternatingTextScene from "./AlternatingTextScene";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
+// --- ĐÃ THAY ĐỔI TEXT ---
 const texts = [
   {
-    heading: "Gut-Friendly Goodness",
-    body: "Our soda is packed with prebiotics and 1 billion probiotics, giving your gut the love it deserves. Say goodbye to bloating and hello to a happy, healthy digestive system with every sip.",
+    heading: "Nguồn Gốc Minh Bạch",
+    body: "Chúng tôi làm việc trực tiếp với các nghệ nhân và nhà nông trên khắp cả nước, đảm bảo từng sản phẩm bạn nhận được đều có nguồn gốc rõ ràng và chất lượng.",
   },
   {
-    heading: "Light Calories, Big Flavor",
-    body: "Indulge in bold, refreshing taste without the guilt. At just 20 calories per can, you can enjoy all the flavor you crave with none of the compromise.",
+    heading: "Kỹ Thuật Thủ Công",
+    body: "Từ gốm sứ, sơn mài đến lụa tơ tằm, mỗi sản phẩm là một tác phẩm nghệ thuật được chế tác tỉ mỉ, lưu giữ giá trị văn hóa qua nhiều thế hệ.",
   },
   {
-    heading: "Naturally Refreshing",
-    body: "Made with only the best natural ingredients, our soda is free from artificial sweeteners and flavors. It’s a crisp, clean taste that feels as good as it tastes, giving you a boost of real, natural refreshment.",
+    heading: "Hương Vị Nguyên Bản",
+    body: "Các đặc sản được lựa chọn kỹ lưỡng, giữ trọn hương vị nguyên bản của vùng miền, không chất bảo quản, mang đến trải nghiệm ẩm thực thuần túy nhất.",
   },
 ];
 
@@ -25,7 +28,7 @@ const AlternatingText = () => {
   const isDesktop = useMediaQuery("(min-width:768px)", true);
 
   return (
-    <Bounded className="alternating-text-container relative text-sky-950 bg-yellow-300">
+    <Bounded className="alternating-text-container relative text-gray-100 bg-[#4B5320]">
       <div>
         <div className="grid relative">
           {isDesktop && (

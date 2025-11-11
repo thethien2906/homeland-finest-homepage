@@ -9,8 +9,8 @@ const SkyDrive = () => {
     <Bounded className="skydive h-screen">
       <View className="h-screen w-screen">
         <SkyDriveScene
-          flavor="blackCherry"
-          sentence="Dive into better health"
+          productId="ruouCan" // <-- ĐÃ ĐỔI: từ 'flavor' sang 'productId'
+          sentence="Hương Vị Núi Rừng" // <-- ĐÃ ĐỔI: text
         />
       </View>
     </Bounded>

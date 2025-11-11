@@ -12,7 +12,7 @@ const Logo = ({ ...props }) => {
       className={clsx("group", props.className)}
       aria-labelledby="fizzi-logo-title"
     >
-      <title id="fizzi-logo-title">Fizzi</title>
+      <title id="fizzi-logo-title">THQN</title>
       <g clipPath="url(#clip0_342_66)">
         <mask
           id="mask0_342_66"

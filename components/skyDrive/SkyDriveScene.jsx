@@ -7,11 +7,12 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import FloatingCan from "../FloatingCan";
+import FloatingProduct from "../FloatingProduct";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const SkyDriveScene = ({ sentence, flavor }) => {
+const SkyDriveScene = ({ sentence, productId }) => {
   const groupRef = useRef(null);
   const canRef = useRef(null);
   const cloud1Ref = useRef(null);
@@ -129,15 +130,20 @@ const SkyDriveScene = ({ sentence, flavor }) => {
   return (
     <group ref={groupRef}>
       <group rotation={[0, 0, 0.5]}>
-        <FloatingCan
+        {/* THAY THẾ COMPONENT TẠI ĐÂY */}
+        <FloatingProduct
           ref={canRef}
-          flavor={flavor}
+          productId={productId} // <-- Dùng productId
           rotationIntensity={0}
           floatIntensity={3}
-          floatSpeed={3}
+          floatSpeed={2.5}
+          scale={1.4} // <-- Thêm scale (bạn có thể cần chỉnh số này)
         >
-          <pointLight intensity={30} color="#8c0413" decay={0.6} />
-        </FloatingCan>
+          {/* Ánh sáng màu đỏ (#8c0413) là của lon cherry.
+            Bạn có thể đổi sang màu vàng ấm của rượu.
+          */}
+          <pointLight intensity={30} color="#D4AF37" decay={0.6} />
+        </FloatingProduct>
       </group>
 
       {/* Clouds */}

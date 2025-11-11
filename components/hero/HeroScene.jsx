@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import FloatingCan from "../FloatingCan";
+import FloatingProduct from "../FloatingProduct";
 import { useStore } from "@/hooks/useStore";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -42,7 +43,7 @@ const HeroScene = () => {
 
     // Set cans starting location
     gsap.set(can1Ref.current.position, { x: -1.5 });
-    gsap.set(can1Ref.current.rotation, { z: -0.5 });
+    gsap.set(can1Ref.current.rotation, { z: -0.5, y: -0.8 });
 
     gsap.set(can2Ref.current.position, { x: 1.5 });
     gsap.set(can2Ref.current.rotation, { z: 0.5 });
@@ -79,21 +80,34 @@ const HeroScene = () => {
     scrollTl
       // Rotate can group
       .to(groupRef.current.rotation, { y: Math.PI * 2 })
-      // Can 1 - black cherry
-      .to(can1Ref.current.position, { x: -0.2, y: -0.7, z: -2 }, 0)
-      .to(can1Ref.current.rotation, { z: 0.3 }, 0)
-      // Can 2 - lemon lime
-      .to(can2Ref.current.position, { x: 1, y: -0.2, z: -1 }, 0)
+
+      // Can 1 - Nước mắm
+      .to(can1Ref.current.position, {
+        x: -0.8, // <-- ĐÃ SỬA: Dịch sang trái (từ -0.2 -> -0.8)
+        y: -0.5,
+        z: -2
+      }, 0)
+      .to(can1Ref.current.rotation, { z: 0.3, y: -1 }, 0)
+
+      // Can 2 - Đèn lồng (giữ nguyên)
+      .to(can2Ref.current.position, { x: 1.2, y: -0.2, z: -1 }, 0)
       .to(can2Ref.current.rotation, { z: 0 }, 0)
-      // Can 3 - grape
+
+      // Can 3 - Rượu (giữ nguyên)
       .to(can3Ref.current.position, { x: -0.3, y: 0.5, z: -1 }, 0)
       .to(can3Ref.current.rotation, { z: -0.1 }, 0)
-      // Can 4 - strawberry lemonade
-      .to(can4Ref.current.position, { x: 0, y: -0.3, z: 0.5 }, 0)
+
+      // Can 4 - Nem chua (giữ nguyên vị trí)
+      .to(can4Ref.current.position, { x: -0.3, y: -0.3, z: 1.5 }, 0)
       .to(can4Ref.current.rotation, { z: 0.3 }, 0)
-      // Can 5 - watermelon
+
+      // Can 5 - Bánh pía
       .to(can5Ref.current.position, { x: 0.3, y: 0.5, z: -0.5 }, 0)
-      .to(can5Ref.current.rotation, { z: -0.25 }, 0)
+      .to(can5Ref.current.rotation, {
+        z: -0.25,
+        y: 0.9 // <-- ĐÃ THÊM: Xoay 45 độ quanh trục Y (Math.PI / 4)
+      }, 0)
+
       // Transform can group
       .to(
         groupRef.current.position,
@@ -102,29 +116,65 @@ const HeroScene = () => {
       );
   });
 
-  return (
+  // return (
+  //   <group ref={groupRef}>
+  //     <group ref={can1GroupRef}>
+  //       <FloatingCan
+  //         ref={can1Ref}
+  //         flavor="blackCherry"
+  //         floatSpeed={FLOAT_SPEED}
+  //       />
+  //     </group>
+  //     <group ref={can2GroupRef}>
+  //       <FloatingCan
+  //         ref={can2Ref}
+  //         flavor="lemonLime"
+  //         floatSpeed={FLOAT_SPEED}
+  //       />{" "}
+  //     </group>
+  //     <FloatingCan ref={can3Ref} flavor="grape" floatSpeed={FLOAT_SPEED} />{" "}
+  //     <FloatingCan
+  //       ref={can4Ref}
+  //       flavor="strawberryLemonade"
+  //       floatSpeed={FLOAT_SPEED}
+  //     />
+  //     <FloatingCan ref={can5Ref} flavor="watermelon" floatSpeed={FLOAT_SPEED} />
+  //     <Environment files="/hdrs/field.hdr" environmentIntensity={1.5} />
+  //   </group>
+  // );
+return (
     <group ref={groupRef}>
       <group ref={can1GroupRef}>
-        <FloatingCan
+        <FloatingProduct
           ref={can1Ref}
-          flavor="blackCherry"
+          productId="nuocMam" // <-- Dùng ID sản phẩm
           floatSpeed={FLOAT_SPEED}
         />
       </group>
       <group ref={can2GroupRef}>
-        <FloatingCan
+        <FloatingProduct
           ref={can2Ref}
-          flavor="lemonLime"
+          productId="longDen" // <-- Dùng ID sản phẩm
           floatSpeed={FLOAT_SPEED}
         />{" "}
       </group>
-      <FloatingCan ref={can3Ref} flavor="grape" floatSpeed={FLOAT_SPEED} />{" "}
-      <FloatingCan
+      <FloatingProduct
+        ref={can3Ref}
+        productId="ruou"
+        floatSpeed={FLOAT_SPEED}
+        scale={1.6}
+      />{" "}
+      <FloatingProduct
         ref={can4Ref}
-        flavor="strawberryLemonade"
+        productId="nemChua" // Đây là ref 4 của bạn
+        floatSpeed={FLOAT_SPEED}
+        scale={1} // <-- GIẢM KÍCH THƯỚC TỪ 2 XUỐNG 1.5 (hoặc nhỏ hơn)
+      />
+      <FloatingProduct
+        ref={can5Ref}
+        productId="banhPia" // Bánh pía giờ ở ref 5
         floatSpeed={FLOAT_SPEED}
       />
-      <FloatingCan ref={can5Ref} flavor="watermelon" floatSpeed={FLOAT_SPEED} />
       <Environment files="/hdrs/field.hdr" environmentIntensity={1.5} />
     </group>
   );
