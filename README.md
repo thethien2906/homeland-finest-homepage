@@ -1,27 +1,3 @@
-# Fizzi - 3D E-commerce Landing Page
-
-Fizzi is a modern 3D e-commerce landing page built with Three.js, React Three Fiber, and GSAP, combined with Next.js for seamless performance and interactive user experiences. This project showcases cutting-edge web technologies and a fully responsive design.
-
-![Website Preview](https://fizzi-3d-ecommerce-landing.vercel.app/Screenshot.png)
-
----
-
-## Demo
-
-Check out the live demo: [Fizzi Live Demo](https://fizzi-3d-ecommerce-landing.vercel.app/)
-
----
-
-## Features
-
-- Interactive 3D visuals with **Three.js** and **React Three Fiber**.
-- Smooth animations powered by **GSAP**.
-- Fully responsive and optimized for all devices.
-- Styled with **TailwindCSS**.
-- Easy state management using **Zustand**.
-- Performance monitoring with **r3f-perf**.
-
----
 
 ## Getting Started
 
@@ -30,8 +6,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/sheyda0/fizzi-3d-ecommerce-landing
-   cd fizzi-3d-ecommerce-landing
+   git clone https://github.com/sheyda0/homeland-finest-homepage
+   cd homeland-finest-homepage
 
    ```
 
