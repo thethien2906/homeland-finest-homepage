@@ -1,9 +1,9 @@
-import Logo from "./Logo";
+import TinhHoaLogo from "./TinhHoaLogo";
 
 const Header = () => {
   return (
-    <header className="-mb-28 flex justify-center py-4">
-      <Logo className="z-10 h-20 cursor-pointer text-sky-800" />
+    <header className="flex justify-center py-0.5 mb-[-5rem]">
+      <TinhHoaLogo className="z-10 h-16 w-16 cursor-pointer text-orange-500 md:h-16 md:w-16" />
     </header>
   );
 };

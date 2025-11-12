@@ -1,19 +1,19 @@
-import localFont from "next/font/local";
+import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import ViewCanvas from "@/components/ViewCanvas";
 import Footer from "@/components/Footer";
 
-const alpino = localFont({
-  src: "../public/fonts/Alpino-Variable.woff2",
+const beVietnamPro = Be_Vietnam_Pro({
+  subsets: ["latin", "vietnamese"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
-  weight: "100 900",
-  variable: "--font-alpino",
+  variable: "--font-be-vietnam-pro",
 });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={alpino.variable}>
+    <html lang="vi" className={beVietnamPro.variable}>
       <body className="overflow-x-hidden bg-yellow-300">
         <Header />
         <main>

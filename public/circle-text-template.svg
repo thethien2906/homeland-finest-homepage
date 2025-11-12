@@ -1,0 +1,40 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 123 123"
+  class="circle-text"
+  aria-labelledby="circle-text"
+>
+  <title id="circle-text">Tinh Hoa Quê Nhà • Đậm Hồn Dân Tộc •</title>
+  <!-- Nền tròn -->
+  <circle
+    cx="61.5"
+    cy="61.5"
+    r="51"
+    fill="#FFFCFA"
+  />
+  <!-- Đường tròn ẩn để textPath đi theo -->
+  <defs>
+    <path
+      id="circle-path"
+      d="M 61.5,11.5 A 50,50 0 1,1 61.5,111.5 A 50,50 0 1,1 61.5,11.5"
+    />
+  </defs>
+  <!-- Text xoay quanh vòng tròn -->
+  <g class="animate-spin-slow" style="transform-origin: 61.5px 61.5px">
+    <text
+      fill="#1A871D"
+      font-size="8"
+      font-family="Arial, sans-serif"
+      font-weight="bold"
+    >
+      <textPath
+        href="#circle-path"
+        startOffset="0%"
+      >
+        Tinh Hoa Quê Nhà • Đậm Hồn Dân Tộc •
+      </textPath>
+    </text>
+  </g>
+</svg>
+

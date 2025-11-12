@@ -102,23 +102,23 @@ const Hero = () => {
       <div className="grid">
         <div className="grid h-screen place-items-center">
           <div className="grid auto-rows-min place-items-center text-center">
-            <h1 className="hero-header text-1lg font-black uppercase leading-[.8] text-orange-500 md:text-[9rem] lg:text-[13rem]">
+            <h1 className="hero-header text-4xl font-black uppercase leading-[1.05] text-orange-500 md:text-[5rem] lg:text-[6.5rem] mb-[-1.5rem]">
               <TextSplitter
                 text="Tinh Hoa Quê Nhà"
                 wordDisplayStyle="block"
                 className="hero-header-word"
               />
             </h1>
-            <div className="hero-subheading mt-12 text-5xl font-semibold text-sky-950j lg:text-6xl">
+            <div className="hero-subheading mt-6 text-4xl font-semibold text-sky-950 md:mt-8 md:text-5xl lg:text-3xl">
               Gói trọn bản sắc Việt
             </div>
-            <div className="hero-body text-2xl font-mono text-sky-950">
+            <div className="hero-body mt-4 text-xl font-mono text-sky-950 md:text-2xl">
               Đặc sản & Thủ công mỹ nghệ. Tinh xảo. Đậm hồn Dân tộc.
             </div>
             <Button
               buttonLink="/"
               buttonText="KHÁM PHÁ NGAY"
-              className="hero-button mt-12"
+              className="hero-button mt-6 md:mt-8"
             />
           </div>
         </div>

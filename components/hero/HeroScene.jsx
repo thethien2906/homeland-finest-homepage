@@ -45,7 +45,7 @@ const HeroScene = () => {
     gsap.set(can1Ref.current.position, { x: -1.5 });
     gsap.set(can1Ref.current.rotation, { z: -0.5, y: -0.8 });
 
-    gsap.set(can2Ref.current.position, { x: 1.5 });
+    gsap.set(can2Ref.current.position, { x: 2.2 });
     gsap.set(can2Ref.current.rotation, { z: 0.5 });
 
     gsap.set(can3Ref.current.position, { y: 5, z: 2 });
@@ -84,13 +84,13 @@ const HeroScene = () => {
       // Can 1 - Nước mắm
       .to(can1Ref.current.position, {
         x: -0.8, // <-- ĐÃ SỬA: Dịch sang trái (từ -0.2 -> -0.8)
-        y: -0.5,
+        y: -0.65,
         z: -2
       }, 0)
       .to(can1Ref.current.rotation, { z: 0.3, y: -1 }, 0)
 
       // Can 2 - Đèn lồng (giữ nguyên)
-      .to(can2Ref.current.position, { x: 1.2, y: -0.2, z: -1 }, 0)
+      .to(can2Ref.current.position, { x: 1.2, y: -0.35, z: -1 }, 0)
       .to(can2Ref.current.rotation, { z: 0 }, 0)
 
       // Can 3 - Rượu (giữ nguyên)
@@ -98,11 +98,11 @@ const HeroScene = () => {
       .to(can3Ref.current.rotation, { z: -0.1 }, 0)
 
       // Can 4 - Nem chua (giữ nguyên vị trí)
-      .to(can4Ref.current.position, { x: -0.3, y: -0.3, z: 1.5 }, 0)
+      .to(can4Ref.current.position, { x: -0.3, y: -0.4, z: 1.5 }, 0)
       .to(can4Ref.current.rotation, { z: 0.3 }, 0)
 
       // Can 5 - Bánh pía
-      .to(can5Ref.current.position, { x: 0.3, y: 0.5, z: -0.5 }, 0)
+      .to(can5Ref.current.position, { x: 0.3, y: 0.35, z: -0.5 }, 0)
       .to(can5Ref.current.rotation, {
         z: -0.25,
         y: 0.9 // <-- ĐÃ THÊM: Xoay 45 độ quanh trục Y (Math.PI / 4)

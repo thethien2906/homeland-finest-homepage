@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-alpino)", "sans-serif"],
+        sans: ["var(--font-be-vietnam-pro)", "sans-serif"],
       },
       keyframes: {
         "slide-left": {
