@@ -5,7 +5,7 @@ const CircleText = ({
   textColor = "#1A871D",
   backgroundColor = "#FFFCFA",
   className,
-  fontSize = "12",
+  fontSize = "12  ",
   radius = 50,
 }) => {
   // Tính toán đường tròn cho textPath
