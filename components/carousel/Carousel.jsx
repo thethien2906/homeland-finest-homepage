@@ -34,6 +34,10 @@ const Carousel = () => {
   // Đổi tên state cho rõ nghĩa
   const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
   const canRef = useRef(null);
+  
+  const handleProductClick = () => {
+    window.location.href = "https://tinhhoaquenha.online/products";
+  };
 
   // Đổi tên hàm
   const changeCategory = (index) => {
@@ -98,25 +102,31 @@ const Carousel = () => {
         />
 
         {/* Model 3D */}
-        <View className="aspect-square h-[70vmin] min-h-40">
-          <Center position={[0, 0, 1.5]}>
-            <group ref={canRef}>
-              {/* Thay thế 'FloatingCan' bằng 'FloatingProduct' */}
-              <FloatingProduct
-                floatIntensity={0.3}
-                rotationIntensity={1}
-                productId={categories[currentCategoryIndex].productId} // <-- Dùng productId động
-                scale={categories[currentCategoryIndex].productId === 'longDen' ? 2 : 1} // <-- Tùy chỉnh kích cỡ
-              />
-            </group>
-          </Center>
-          <directionalLight intensity={6} position={[0, 1, 1]} />
-          <Environment
-            files="/hdrs/lobby.hdr"
-            environmentIntensity={0.6}
-            environmentRotation={[0, 3, 0]}
-          />
-        </View>
+        <div 
+          onClick={handleProductClick}
+          className="cursor-pointer"
+          style={{ position: "relative" }}
+        >
+          <View className="aspect-square h-[70vmin] min-h-40">
+            <Center position={[0, 0, 1.5]}>
+              <group ref={canRef}>
+                {/* Thay thế 'FloatingCan' bằng 'FloatingProduct' */}
+                <FloatingProduct
+                  floatIntensity={0.3}
+                  rotationIntensity={1}
+                  productId={categories[currentCategoryIndex].productId} // <-- Dùng productId động
+                  scale={categories[currentCategoryIndex].productId === 'longDen' ? 2 : 1} // <-- Tùy chỉnh kích cỡ
+                />
+              </group>
+            </Center>
+            <directionalLight intensity={6} position={[0, 1, 1]} />
+            <Environment
+              files="/hdrs/lobby.hdr"
+              environmentIntensity={0.6}
+              environmentRotation={[0, 3, 0]}
+            />
+          </View>
+        </div>
 
         {/* Right */}
         <ArrowButton

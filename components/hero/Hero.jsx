@@ -116,7 +116,7 @@ const Hero = () => {
               Đặc sản & Thủ công mỹ nghệ. Tinh xảo. Đậm hồn Dân tộc.
             </div>
             <Button
-              buttonLink="/"
+              buttonLink="https://tinhhoaquenha.online/discover"
               buttonText="KHÁM PHÁ NGAY"
               className="hero-button mt-6 md:mt-8"
             />
