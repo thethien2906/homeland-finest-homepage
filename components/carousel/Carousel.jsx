@@ -34,9 +34,9 @@ const Carousel = () => {
   // Đổi tên state cho rõ nghĩa
   const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
   const canRef = useRef(null);
-  
+
   const handleProductClick = () => {
-    window.location.href = "https://tinhhoaquenha.online/products";
+    window.open("https://tinhhoaquenha.online/products", "_blank", "noopener,noreferrer");
   };
 
   // Đổi tên hàm
@@ -102,7 +102,7 @@ const Carousel = () => {
         />
 
         {/* Model 3D */}
-        <div 
+        <div
           onClick={handleProductClick}
           className="cursor-pointer"
           style={{ position: "relative" }}

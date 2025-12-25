@@ -3,11 +3,13 @@ import Link from "next/link";
 
 const Button = ({ buttonLink, buttonText, className }) => {
   const isExternal = buttonLink?.startsWith("http");
-  
+
   if (isExternal) {
     return (
       <a
         href={buttonLink}
+        target="_blank"
+        rel="noopener noreferrer"
         className={clsx(
           "rounded-xl bg-orange-600 px-5 py-4 text-center text-xl font-bold uppercase tracking-wide text-white transition-colors duration-150 hover:bg-orange-700 md:text-2xl",
           className
@@ -17,7 +19,7 @@ const Button = ({ buttonLink, buttonText, className }) => {
       </a>
     );
   }
-  
+
   return (
     <Link
       href={buttonLink}
